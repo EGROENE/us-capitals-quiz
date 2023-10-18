@@ -1,2 +1,3 @@
 ﻿# us-capitals-quiz
-This project is a redoing of one of my first JS projects, in which I provide a quiz to user about the capitals of all US states. I have been yearning to do so for some time now, as the original code is fricking awful, though it worked. In this revision, I plan to use TypeScript & React.js.
+ 
+This is a revision of one of my first JS projects, in which I made a quiz about the capitals of the US states. Every time I looked at my old code on this project, I vomited a bit inside my mouth, so I figured I would redo it all using React.js & TypeScript.
