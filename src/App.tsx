@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { useState } from "react";
+import statesInfo from "./constants.js";
+import State from "./Components/State/State";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(-1);
+
+  const toNextState = (): void => {
+    setCurrentIndex(currentIndex + 1);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div
+        className={currentIndex === -1 ? "onGreet" : "onQuestion"}
+        style={
+          currentIndex !== -1 && {
+            background: `url(${statesInfo[currentIndex].backgroundImage})`,
+            backgroundSize: "cover"
+          }
+        }
+        id="hero"
+      >
+        {currentIndex === -1 ? (
+          <div id="greeting-box">
+            <h1>Welcome to the US State Capitals Quiz!</h1>
+            <h2>Click the button below to get started.</h2>
+            <button id="start-btn" onClick={toNextState}>
+              Let's go!
+            </button>
+          </div>
+        ) : (
+          <State
+            answeredStates={currentIndex + 1}
+            state={statesInfo[currentIndex]}
+          />
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
