@@ -57,6 +57,7 @@ const State = (props: StateProps) => {
       <header>{`What's the capital of ${props.state.name}?`}</header>
       {options.map((option) => (
         <button
+          disabled={props.stateHasBeenAnswered}
           onClick={() => {
             handleAnswer(option[0]);
           }}

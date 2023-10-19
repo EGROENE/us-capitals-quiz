@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -27,11 +27,14 @@
 
 #hero.onGreet {
   padding: 125px;
-  background: url(./assets/initial-bg.jpg) 0% 0% / cover;
+  background: url(./assets/initial-bg.jpg);
+  background-position: 0%;
+  background-size: cover;
+  width: 79%;
 }
 
 #hero.onQuestion {
-  height: 100vh;
+  height: 70vh;
   padding: 42px;
 }
 
@@ -78,7 +81,7 @@
   color: white;
   text-align: center;
   padding: var(--size-32);
-  margin: 48px 256px 0 256px;
+  margin: 0px 256px 0 256px;
   display: grid;
   row-gap: var(--size-12);
 }
@@ -91,8 +94,8 @@
 
 .display-question button {
   font-family: 'Aref Ruqaa', serif;
-  font-size: var(--size-24);
-  padding-bottom: var(--size-8);
+  font-size: var(--size-20);
+  padding-bottom: 10px;
   border: var(--size-4) solid transparent;
 }
 
@@ -103,18 +106,31 @@
   border: var(--size-4) solid white;
 }
 
+.option {
+  background-color: white;
+  color: black;
+}
+
+.option:disabled {
+  background-color: gray;
+  color: black;
+}
+
+.option:disabled:hover {
+  cursor: not-allowed;
+  background-color: gray;
+  color: black;
+  border-color: transparent;
+}
+
 .total-score {
   font-size: var(--size-24);
+  margin: 0.25rem 0;
 }
 
 .reset-btn,
 .next-btn {
   color: white;
-}
-
-.reset-btn:hover,
-.next-btn:hover {
-  background-color: transparent;
 }
 
 .reset-btn {
