@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import InGameBtns from "../InGameBtns/InGameBtns";
+import AnswerResult from "../AnswerResult/AnswerResult";
 
 interface StateOptionsObject {
   stateCapital: string;
@@ -15,6 +16,7 @@ interface StateDataObject {
 }
 
 interface StateProps {
+  currentIndex: number;
   state: StateDataObject;
   answeredStates: number;
   statesInfoLength: number;
@@ -23,6 +25,8 @@ interface StateProps {
   toNextState: void;
   stateHasBeenAnswered: boolean;
   setStateHasBeenAnswered: Dispatch<SetStateAction<boolean>>;
+  isCorrect: boolean;
+  setIsCorrect: Dispatch<SetStateAction<boolean>>;
 }
 
 const State = (props: StateProps) => {
@@ -36,7 +40,11 @@ const State = (props: StateProps) => {
   const handleAnswer = (option: string): void => {
     props.setStateHasBeenAnswered(true);
     if (option === "stateCapital") {
+      // set state isCorrect to true:
+      props.setIsCorrect(true);
       props.setCurrentScore(props.currentScore + 1);
+    } else {
+      props.setIsCorrect(false);
     }
   };
 
@@ -58,6 +66,13 @@ const State = (props: StateProps) => {
           {option[1]}
         </button>
       ))}
+      {props.stateHasBeenAnswered && (
+        <AnswerResult
+          currentScore={props.currentScore}
+          answeredQuestions={props.currentIndex + 1}
+          isCorrect={props.isCorrect}
+        />
+      )}
       <InGameBtns
         toNextState={props.toNextState}
         stateHasBeenAnswered={props.stateHasBeenAnswered}

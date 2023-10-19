@@ -11,6 +11,8 @@ function App() {
   const [stateHasBeenAnswered, setStateHasBeenAnswered] =
     useState<boolean>(false);
 
+  const [isCorrect, setIsCorrect] = useState<boolean>(false);
+
   function toNextState(): void {
     setStateHasBeenAnswered(false);
     setCurrentIndex(currentIndex + 1);
@@ -41,6 +43,7 @@ function App() {
           </div>
         ) : (
           <State
+            currentIndex={currentIndex}
             stateHasBeenAnswered={stateHasBeenAnswered}
             setStateHasBeenAnswered={setStateHasBeenAnswered}
             currentScore={currentScore}
@@ -49,6 +52,8 @@ function App() {
             state={statesInfo[currentIndex]}
             statesInfoLength={statesInfo.length}
             toNextState={toNextState}
+            isCorrect={isCorrect}
+            setIsCorrect={setIsCorrect}
           />
         )}
       </div>
