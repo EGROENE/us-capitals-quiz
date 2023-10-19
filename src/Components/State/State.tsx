@@ -1,14 +1,14 @@
 import { Dispatch, SetStateAction } from "react";
 import InGameBtns from "../InGameBtns/InGameBtns";
 
-export interface StateOptionsObject {
+interface StateOptionsObject {
   stateCapital: string;
   wrongOptionOne: string;
   wrongOptionTwo: string;
   wrongOptionThree: string;
 }
 
-export interface StateDataObject {
+interface StateDataObject {
   name: string;
   backgroundImage: string;
   options: StateOptionsObject;
