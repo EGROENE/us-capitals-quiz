@@ -47,7 +47,7 @@ function App() {
             setCurrentScore={setCurrentScore}
             answeredStates={currentIndex + 1}
             state={statesInfo[currentIndex]}
-            statesInfo={statesInfo} // passed so component has access to statesInfo 'length' property
+            statesInfoLength={statesInfo.length}
             toNextState={toNextState}
           />
         )}

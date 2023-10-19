@@ -17,7 +17,7 @@ interface StateDataObject {
 interface StateProps {
   state: StateDataObject;
   answeredStates: number;
-  statesInfo: [];
+  statesInfoLength: number;
   currentScore: number;
   setCurrentScore: Dispatch<SetStateAction<number>>;
   toNextState: void;
@@ -45,7 +45,7 @@ const State = (props: StateProps) => {
       id={`display-question-${props.state.name.toLowerCase()}`}
       className="display-question"
     >
-      <header>{`${props.answeredStates} / ${props.statesInfo.length}`}</header>
+      <header>{`${props.answeredStates} / ${props.statesInfoLength}`}</header>
       <header>{`What's the capital of ${props.state.name}?`}</header>
       {options.map((option) => (
         <button
