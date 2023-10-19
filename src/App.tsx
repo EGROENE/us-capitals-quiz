@@ -4,21 +4,30 @@ import statesInfo from "./constants.js";
 import State from "./Components/State/State";
 
 function App() {
-  const [currentIndex, setCurrentIndex] = useState(-1);
+  const [currentIndex, setCurrentIndex] = useState<number>(-1);
 
-  const toNextState = (): void => {
+  const [currentScore, setCurrentScore] = useState<number>(0);
+
+  const [stateHasBeenAnswered, setStateHasBeenAnswered] =
+    useState<boolean>(false);
+
+  function toNextState(): void {
+    setStateHasBeenAnswered(false);
     setCurrentIndex(currentIndex + 1);
-  };
+  }
 
   return (
     <>
       <div
         className={currentIndex === -1 ? "onGreet" : "onQuestion"}
         style={
-          currentIndex !== -1 && {
-            background: `url(${statesInfo[currentIndex].backgroundImage})`,
-            backgroundSize: "cover"
-          }
+          currentIndex !== -1
+            ? {
+                background: `url(${statesInfo[currentIndex].backgroundImage})`,
+                backgroundSize: "cover",
+                backgroundPosition: "unset",
+              }
+            : undefined
         }
         id="hero"
       >
@@ -32,8 +41,14 @@ function App() {
           </div>
         ) : (
           <State
+            stateHasBeenAnswered={stateHasBeenAnswered}
+            setStateHasBeenAnswered={setStateHasBeenAnswered}
+            currentScore={currentScore}
+            setCurrentScore={setCurrentScore}
             answeredStates={currentIndex + 1}
             state={statesInfo[currentIndex]}
+            statesInfo={statesInfo} // passed so component has access to statesInfo 'length' property
+            toNextState={toNextState}
           />
         )}
       </div>
