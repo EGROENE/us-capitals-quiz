@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import InGameBtns from "../InGameBtns/InGameBtns";
 import AnswerResult from "../AnswerResult/AnswerResult";
 
@@ -31,9 +31,38 @@ interface StateProps {
 }
 
 const State = (props: StateProps) => {
-  const handleAnswer = (option: string): void => {
+  const [selectedAnswer, setSelectedAnswer] = useState<string>();
+
+  let correctAnswer: string;
+  for (const option of props.stateAnswers) {
+    if (option.includes("stateCapital")) {
+      correctAnswer = option[1];
+    }
+  }
+
+  const getAnswerStyle = (city: string) => {
+    if (props.stateHasBeenAnswered) {
+      if (
+        (selectedAnswer === city && props.isCorrect) ||
+        city === correctAnswer
+      ) {
+        return {
+          borderColor: "springgreen",
+        };
+      } else if (selectedAnswer === city) {
+        return {
+          borderColor: "red",
+        };
+      } else {
+        return undefined;
+      }
+    }
+  };
+
+  const handleAnswer = (option: string[]): void => {
+    setSelectedAnswer(option[1]);
     props.setStateHasBeenAnswered(true);
-    if (option === "stateCapital") {
+    if (option[0] === "stateCapital") {
       props.setIsCorrect(true);
       props.setCurrentScore(props.currentScore + 1);
     } else {
@@ -52,10 +81,11 @@ const State = (props: StateProps) => {
         <button
           disabled={props.stateHasBeenAnswered}
           onClick={() => {
-            handleAnswer(option[0]);
+            handleAnswer(option);
           }}
           key={option[1]}
           className="option"
+          style={getAnswerStyle(option[1])}
         >
           {option[1]}
         </button>
