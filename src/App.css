@@ -36,6 +36,9 @@
 #hero.onQuestion {
   height: 70vh;
   padding: 42px;
+  background-size: cover;
+  background-position: unset;
+  background-repeat: no-repeat;
 }
 
 #greeting-box,
@@ -112,14 +115,14 @@
 }
 
 .option:disabled {
-  background-color: gray;
-  color: black;
+  background-color: rgb(36, 35, 35);
+  color: gray;
 }
 
 .option:disabled:hover {
   cursor: not-allowed;
-  background-color: gray;
-  color: black;
+  background-color: rgb(36, 35, 35);
+  color: gray;
   border-color: transparent;
 }
 
