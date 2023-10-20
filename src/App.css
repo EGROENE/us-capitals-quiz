@@ -116,13 +116,13 @@
 
 .option:disabled {
   background-color: rgb(36, 35, 35);
-  color: rgb(36, 35, 35);
+  color: gray;
 }
 
 .option:disabled:hover {
   cursor: not-allowed;
   background-color: rgb(36, 35, 35);
-  color: rgb(36, 35, 35);
+  color: gray;
   border-color: transparent;
 }
 
