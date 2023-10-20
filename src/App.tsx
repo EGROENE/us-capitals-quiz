@@ -1,7 +1,22 @@
 import "./App.css";
 import { useState } from "react";
 import statesInfo from "./constants.js";
-import State from "./Components/State/State";
+import State, {
+  StateAnswerObject,
+  StateDataObject,
+} from "./Components/State/State";
+import shuffleArray from "./methods.js";
+
+const allStateAnswersObjects = statesInfo.map((state: StateDataObject) => {
+  return state.options;
+});
+
+// Use this to populate answers in State.tsx
+const allStateAnswersObjectsShuffled = allStateAnswersObjects.map(
+  (answerObject: StateAnswerObject) => {
+    return shuffleArray(Object.entries(answerObject));
+  }
+);
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState<number>(-1);
@@ -42,14 +57,15 @@ function App() {
         ) : (
           <State
             currentIndex={currentIndex}
+            toNextState={toNextState}
             stateHasBeenAnswered={stateHasBeenAnswered}
             setStateHasBeenAnswered={setStateHasBeenAnswered}
             currentScore={currentScore}
             setCurrentScore={setCurrentScore}
             answeredStates={currentIndex + 1}
-            state={statesInfo[currentIndex]}
+            stateName={statesInfo[currentIndex].name}
+            stateAnswers={allStateAnswersObjectsShuffled[currentIndex]}
             statesInfoLength={statesInfo.length}
-            toNextState={toNextState}
             isCorrect={isCorrect}
             setIsCorrect={setIsCorrect}
           />
