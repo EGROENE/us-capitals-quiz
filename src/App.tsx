@@ -26,8 +26,6 @@ function App() {
           currentIndex !== -1
             ? {
                 background: `url(${statesInfo[currentIndex].backgroundImage})`,
-                backgroundSize: "cover",
-                backgroundPosition: "unset",
               }
             : undefined
         }
