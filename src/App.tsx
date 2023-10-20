@@ -25,7 +25,7 @@ function App() {
         style={
           currentIndex !== -1
             ? {
-                background: `url(${statesInfo[currentIndex].backgroundImage})`,
+                backgroundImage: `url(${statesInfo[currentIndex].backgroundImage})`,
               }
             : undefined
         }
