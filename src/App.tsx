@@ -1,7 +1,6 @@
 import "./App.css";
 import { useState } from "react";
 import statesInfo from "./constants.js";
-import shuffleArray from "./methods.js";
 
 // Child components:
 import Greeting from "./Components/Greeting/Greeting.js";
@@ -10,6 +9,14 @@ import State, {
   StateDataObject,
 } from "./Components/State/State";
 import Results from "./Components/Results/Results.js";
+
+const shuffleArray = (array: [string, string][]): [string, string][] => {
+  for (let i = 1; i < array.length; i++) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
 
 const allStateAnswersObjects = statesInfo.map((state: StateDataObject) => {
   return state.options;
