@@ -40,8 +40,7 @@
   background-repeat: no-repeat;
 }
 
-.greeting-box,
-#results-box {
+.message-box {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: center;
@@ -50,23 +49,21 @@
   border-radius: var(--size-12);
 }
 
-.greeting-box h1,
-#results-box h1 {
+.message-box h1 {
   font-family: var(--primary-font);
 }
 
-.greeting-box h2,
-.greeting-box h3 {
+.message-box h2,
+.message-box h3 {
   font-family: var(--primary-font);
 }
 
-.greeting-box header {
+.message-box header {
   font-size: 2rem;
   margin: var(--size-20) auto;
 }
 
-.greeting-box button,
-#results-box button {
+.message-box button {
   border-radius: var(--size-12);
   font-family: var(--primary-font);
   text-transform: uppercase;
@@ -77,8 +74,7 @@
   font-size: var(--size-20);
 }
 
-.greeting-box button:hover,
-#results-box button:hover {
+.message-box button:hover {
   cursor: pointer;
   background-color: white;
   color: black;
@@ -151,24 +147,14 @@
   margin-left: var(--size-16);
 }
 
-#results-box h1 {
-  font-size: var(--size-48);
-}
-
-#results-box p {
-  font-size: var(--size-32);
-  font-family: var(--primary-font);
-}
-
 /* Responsive design */
 @media screen and (min-width: 1400px) {
-  .greeting-box {
+  .message-box {
       font-size: xx-large;
       margin: 149px 240px;
   }
 
-  .greeting-box button,
-  #results-box button {
+  .message-box button {
       font-size: xxx-large;
   }
 
@@ -184,14 +170,6 @@
       font-size: xxx-large;
       padding-bottom: var(--size-12);
   }
-
-  #reset-gr-btns {
-      justify-content: center;
-  }
-
-  #results-box {
-      margin: 383px 240px;
-  }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1399) {
@@ -199,21 +177,19 @@
       padding: 247px 100px;
   }
 
-  .greeting-box {
+  .message-box {
       padding: 24px;
   }
 
-  .greeting-box h1,
-  #results-box h1 {
+  .message-box h1 {
       font-size: 56px;
   }
 
-  .greeting-box h2 {
+  .message-box h2 {
       font-size: 37px;
   }
 
-  .greeting-box button,
-  #results-box button {
+  .message-box button {
       font-size: 42px;
   }
 
@@ -239,18 +215,6 @@
   .second-btn {
       margin-left: 42px;
   }
-
-  #results-box {
-      padding: 209px 10px;
-  }
-
-  #results-box p {
-      font-size: 42px;
-  }
-
-  #results-box button {
-      padding: 16px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -258,17 +222,13 @@
       padding: 88px;
   }
 
-  .greeting-box {
+  .message-box {
       margin: 48px;
   }
 
   .display-question {
       margin: 0;
       padding: var(--size-16);
-  }
-
-  #results-box {
-      margin: 138px 77px;
   }
 }
 
@@ -287,18 +247,6 @@
   .display-question button {
       font-size: var(--size-20);
   }
-
-  #results-box {
-      margin: 69px 40px;
-  }
-
-  #results-box h1 {
-      font-size: var(--size-32);
-  }
-
-  #results-box p {
-      font-size: var(--size-24);
-  }
 }
 
 @media screen and (max-width: 375px) {
@@ -310,10 +258,6 @@
       row-gap: var(--size-8);
       margin: 8px 0;
       padding: 37px 16px;
-  }
-
-  #results-box {
-      margin: 51px 24px;
   }
 }
 
@@ -349,7 +293,7 @@
       padding: 32px;
   }
 
-  .greeting-box {
+  .message-box {
       margin: 24px;
   }
 
@@ -366,9 +310,5 @@
   .second-btn {
       margin-left: 0;
       margin-top: var(--size-8);
-  }
-
-  #results-box {
-      margin: 16px 14px;
   }
 }
