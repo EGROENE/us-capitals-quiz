@@ -1,11 +1,15 @@
 import "./App.css";
 import { useState } from "react";
 import statesInfo from "./constants.js";
+import shuffleArray from "./methods.js";
+
+// Child components:
+import Greeting from "./Components/Greeting/Greeting.js";
 import State, {
   StateAnswerObject,
   StateDataObject,
 } from "./Components/State/State";
-import shuffleArray from "./methods.js";
+import Results from "./Components/Results/Results.js";
 
 const allStateAnswersObjects = statesInfo.map((state: StateDataObject) => {
   return state.options;
@@ -33,12 +37,16 @@ function App() {
     setCurrentIndex(currentIndex + 1);
   }
 
+  const isQuizComplete = currentIndex === statesInfo.length;
+
   return (
     <>
       <div
-        className={currentIndex === -1 ? "onGreet" : "onQuestion"}
+        className={
+          currentIndex === -1 || isQuizComplete ? "onGreet" : "onQuestion"
+        }
         style={
-          currentIndex !== -1
+          currentIndex !== -1 && !isQuizComplete
             ? {
                 backgroundImage: `url(${statesInfo[currentIndex].backgroundImage})`,
               }
@@ -46,15 +54,8 @@ function App() {
         }
         id="hero"
       >
-        {currentIndex === -1 ? (
-          <div id="greeting-box">
-            <h1>Welcome to the US State Capitals Quiz!</h1>
-            <h2>Click the button below to get started.</h2>
-            <button id="start-btn" onClick={toNextState}>
-              Let's go!
-            </button>
-          </div>
-        ) : (
+        {currentIndex === -1 && <Greeting toNextState={toNextState} />}
+        {!isQuizComplete && currentIndex !== -1 && (
           <State
             currentIndex={currentIndex}
             toNextState={toNextState}
@@ -68,6 +69,12 @@ function App() {
             statesInfoLength={statesInfo.length}
             isCorrect={isCorrect}
             setIsCorrect={setIsCorrect}
+          />
+        )}
+        {isQuizComplete && (
+          <Results
+            currentScore={currentScore}
+            statesInfoLength={statesInfo.length}
           />
         )}
       </div>
