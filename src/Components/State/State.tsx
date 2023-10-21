@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from "react";
-import InGameBtns from "../InGameBtns/InGameBtns";
+import ButtonContainer from "../ButtonContainer/ButtonContainer";
 import AnswerResult from "../AnswerResult/AnswerResult";
 
 export interface StateAnswerObject {
@@ -97,7 +97,9 @@ const State = (props: StateProps) => {
           isCorrect={props.isCorrect}
         />
       )}
-      <InGameBtns
+      <ButtonContainer
+        btnOneText="Reset Game"
+        btnTwoText="Next"
         toNextState={props.toNextState}
         stateHasBeenAnswered={props.stateHasBeenAnswered}
       />
