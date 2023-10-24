@@ -2,6 +2,9 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 :root {
@@ -34,11 +37,13 @@
 
 #hero.onQuestion {
   height: 81vh;
-  /* padding: 42px; */
   padding: 2rem;
   background-size: cover;
   background-position: unset;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .message-box {
@@ -52,6 +57,10 @@
 
 .message-box h1 {
   font-family: var(--primary-font);
+}
+
+.message-box .results h1 {
+  font-size: 4rem;
 }
 
 .message-box h2,
@@ -81,6 +90,10 @@
   color: black;
 }
 
+.results {
+  padding: 2rem;  
+}
+
 .display-question {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
@@ -93,7 +106,7 @@
 
 .display-question header,
 .total-score {
-  font-family: 'Aref Ruqaa', serif;
+  font-family: 'Aref Ruqaa', monospace;
   font-size: var(--size-32);
 }
 
@@ -149,7 +162,7 @@
 }
 
 /* Responsive design */
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1920px) and (min-height: 1080px) {
   #root {
     max-width: unset;
   }
@@ -158,8 +171,12 @@
     margin: 4rem;
   }
 
+  .results h1 {
+    font-size: 3.5rem;
+  }
+
   .message-box button {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     padding: 1rem;
   }
 
@@ -174,7 +191,7 @@
 
   .display-question {
     padding: 2rem;
-    row-gap: 1rem;
+    row-gap: 2rem;
     margin: 2rem;
   }
 
@@ -203,7 +220,7 @@
   }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1600px) and (min-height: 900px) {
   .display-question {
     padding: 1rem;
     margin: 0rem;
@@ -219,7 +236,7 @@
   } */
 }
 
-@media screen and (max-width: 1536px) {
+@media screen and (max-width: 1536px) and (min-height: 864px) {
   .display-question header, 
   .total-score {
     font-size: 2rem;
@@ -348,13 +365,28 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .display-question {
+    width: 95%;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  #root {
+    max-width: unset;
+    width: 49rem;
+  }
+
   #hero {
       padding: 88px;
   }
 
+  #hero.onQuestion {
+    height: 57rem;
+  }
+
   .message-box {
-      margin: 48px;
+    margin: 3rem;
   }
 
   .display-question {
@@ -368,6 +400,10 @@
 
   .total-score {
     font-size: 1.5rem;
+  }
+
+  .results {
+    width: 89%;
   }
 }
 
@@ -383,6 +419,7 @@
   .buttons-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
   }
 
   .second-btn {
@@ -430,6 +467,10 @@
     width: 97%;
   }
 
+  .display-question button {
+    padding: 0.25rem 1rem 0.75rem 1rem;
+  }
+
   .results {
     margin: 0rem;
     height: 24rem;
@@ -453,6 +494,14 @@
   .message-box h1 {
     line-height: 1.4;
     font-size: 2.5rem;
+  }
+
+  .display-question {
+    row-gap: 1rem;
+  }
+
+  .display-question button {
+    padding: 0.25rem 1rem 0.5rem 1rem;
   }
 }
 
