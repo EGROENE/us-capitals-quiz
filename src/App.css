@@ -226,32 +226,6 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
-  /* .message-box {
-      font-size: xx-large;
-      margin: 149px 240px;
-  } */
-
-  /* .message-box button {
-      font-size: xxx-large;
-  } */
-
-  /* .display-question {
-      padding: 28px 45px 101px 45px;
-      row-gap: var(--size-24);
-      margin: 34px 34px 159px 34px;
-      margin: 2rem;
-      
-  } */
-
-  /* .display-question header,
-  .total-score,
-  .display-question button {
-      font-size: xxx-large;
-      padding-bottom: var(--size-12);
-  } */
-}
-
 @media screen and (max-width: 1280px) {
   .display-question button {
     font-size: 1.5rem;
