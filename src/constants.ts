@@ -1,6 +1,7 @@
 const statesInfo = [
   {
-    backgroundImage: "..//al-bg.jpg",
+    backgroundImage:
+      "https://main--us-capitals-quiz.netlify.app/assets/al-bg.jpg",
     name: "Alabama",
     options: {
       stateCapital: "Montgomery",
