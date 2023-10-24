@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction, useState } from "react";
-import ButtonContainer from "../ButtonContainer/ButtonContainer";
 import AnswerResult from "../AnswerResult/AnswerResult";
 
 export interface StateAnswerObject {
@@ -70,6 +69,10 @@ const State = (props: StateProps) => {
     }
   };
 
+  function refreshPage(): void {
+    window.location.reload();
+  }
+
   return (
     <section
       id={`display-question-${props.stateName.toLowerCase()}`}
@@ -97,12 +100,20 @@ const State = (props: StateProps) => {
           isCorrect={props.isCorrect}
         />
       )}
-      <ButtonContainer
-        btnOneText="Reset Game"
-        btnTwoText="Next"
-        toNextState={props.toNextState}
-        stateHasBeenAnswered={props.stateHasBeenAnswered}
-      />
+      <div className="buttons-container">
+        <button className="first-btn" onClick={refreshPage}>
+          Restart Game
+        </button>
+        <button
+          disabled={!props.stateHasBeenAnswered}
+          className="second-btn"
+          onClick={props.toNextState}
+        >
+          {props.currentIndex === props.statesInfoLength - 1
+            ? "See Results!"
+            : "Next"}
+        </button>
+      </div>
     </section>
   );
 };
