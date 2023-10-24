@@ -46,7 +46,7 @@ const statesInfo = [
       stateCapital: "Sacramento",
       wrongOptionOne: "Los Angeles",
       wrongOptionTwo: "San Diego",
-      wrongOptionThree: "Pacific Palisades",
+      wrongOptionThree: "Petaluma",
     },
   },
   {
@@ -65,7 +65,7 @@ const statesInfo = [
     options: {
       stateCapital: "Hartford",
       wrongOptionOne: "Bridgeport",
-      wrongOptionTwo: "Bristol",
+      wrongOptionTwo: "Fairfield",
       wrongOptionThree: "Norwalk",
     },
   },
