@@ -29,7 +29,8 @@
 
 #hero.onGreet {
   padding: 125px;
-  background: url(./assets/initial-bg.jpg);
+  /* background: url(./assets/initial-bg.jpg); */
+  background: url(assets\initial-bg.jpg);
   background-position: 0%;
   background-size: cover;
   width: 79%;
