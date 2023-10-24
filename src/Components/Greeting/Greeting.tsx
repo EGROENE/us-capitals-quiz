@@ -1,5 +1,5 @@
 interface GreetingProps {
-  toNextState: void;
+  toNextState: () => void;
 }
 
 const Greeting = (props: GreetingProps) => {

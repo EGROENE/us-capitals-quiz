@@ -22,7 +22,7 @@ interface StateProps {
   statesInfoLength: number;
   currentScore: number;
   setCurrentScore: Dispatch<SetStateAction<number>>;
-  toNextState: void;
+  toNextState: () => void;
   stateHasBeenAnswered: boolean;
   setStateHasBeenAnswered: Dispatch<SetStateAction<boolean>>;
   isCorrect: boolean;
