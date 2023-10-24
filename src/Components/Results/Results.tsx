@@ -38,7 +38,7 @@ const Results = (props: ResultsProps) => {
   }
 
   return (
-    <div className="message-box">
+    <div className="message-box results">
       <h1>You scored {`${props.currentScore} / ${props.statesInfoLength}`}</h1>
       <header>{getResultMessage()}</header>
       <button onClick={refreshPage}>Play Again!</button>
