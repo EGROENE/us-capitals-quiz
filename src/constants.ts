@@ -1,6 +1,6 @@
 const statesInfo = [
   {
-    backgroundImage: ".././assets/al-bg.jpg",
+    backgroundImage: ".././public/al-bg.jpg",
     name: "Alabama",
     options: {
       stateCapital: "Montgomery",
@@ -10,7 +10,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: ".././assets/ak-bg.jpg",
+    backgroundImage: ".././public/ak-bg.jpg",
     name: "Alaska",
     options: {
       stateCapital: "Juneau",
