@@ -1,6 +1,6 @@
 const statesInfo = [
   {
-    backgroundImage: ".././public/al-bg.jpg",
+    backgroundImage: "/al-bg.jpg",
     name: "Alabama",
     options: {
       stateCapital: "Montgomery",
