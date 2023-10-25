@@ -64,7 +64,8 @@
 }
 
 .message-box h2,
-.message-box h3 {
+.message-box h3,
+.message-box header {
   font-family: var(--primary-font);
 }
 
