@@ -10,7 +10,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: ".././public/ak-bg.jpg",
+    backgroundImage: "/ak-bg.jpg",
     name: "Alaska",
     options: {
       stateCapital: "Juneau",
@@ -20,7 +20,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/az-bg.jpg",
+    backgroundImage: "/az-bg.jpg",
     name: "Arizona",
     options: {
       stateCapital: "Phoenix",
@@ -30,7 +30,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ar-bg.jpg",
+    backgroundImage: "/ar-bg.jpg",
     name: "Arkansas",
     options: {
       stateCapital: "Little Rock",
@@ -40,7 +40,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ca-bg.jpg",
+    backgroundImage: "/ca-bg.jpg",
     name: "California",
     options: {
       stateCapital: "Sacramento",
@@ -50,7 +50,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/co-bg.jpg",
+    backgroundImage: "/co-bg.jpg",
     name: "Colorado",
     options: {
       stateCapital: "Denver",
@@ -60,7 +60,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ct-bg.jpg",
+    backgroundImage: "/ct-bg.jpg",
     name: "Connecticut",
     options: {
       stateCapital: "Hartford",
@@ -70,7 +70,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/de-bg.jpg",
+    backgroundImage: "/de-bg.jpg",
     name: "Delaware",
     options: {
       stateCapital: "Dover",
@@ -80,7 +80,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/fl-bg.jpg",
+    backgroundImage: "/fl-bg.jpg",
     name: "Florida",
     options: {
       stateCapital: "Tallahassee",
@@ -90,7 +90,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ga-bg.jpg",
+    backgroundImage: "/ga-bg.jpg",
     name: "Georgia",
     options: {
       stateCapital: "Atlanta",
@@ -100,7 +100,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/hi-bg.jpg",
+    backgroundImage: "/hi-bg.jpg",
     name: "Hawaii",
     options: {
       stateCapital: "Honolulu",
@@ -110,7 +110,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/id-bg.jpg",
+    backgroundImage: "/id-bg.jpg",
     name: "Idaho",
     options: {
       stateCapital: "Boise",
@@ -120,7 +120,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/il-bg.jpg",
+    backgroundImage: "/il-bg.jpg",
     name: "Illinois",
     options: {
       stateCapital: "Springfield",
@@ -130,7 +130,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/in-bg.jpg",
+    backgroundImage: "/in-bg.jpg",
     name: "Indiana",
     options: {
       stateCapital: "Indianapolis",
@@ -140,7 +140,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ia-bg.jpg",
+    backgroundImage: "/ia-bg.jpg",
     name: "Iowa",
     options: {
       stateCapital: "Des Moines",
@@ -150,7 +150,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ks-bg.jpg",
+    backgroundImage: "/ks-bg.jpg",
     name: "Kansas",
     options: {
       stateCapital: "Topeka",
@@ -160,7 +160,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ky-bg.jpg",
+    backgroundImage: "/ky-bg.jpg",
     name: "Kentucky",
     options: {
       stateCapital: "Frankfort",
@@ -170,7 +170,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/la-bg.jpg",
+    backgroundImage: "/la-bg.jpg",
     name: "Louisiana",
     options: {
       stateCapital: "Baton Rouge",
@@ -180,7 +180,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/me-bg.jpg",
+    backgroundImage: "/me-bg.jpg",
     name: "Maine",
     options: {
       stateCapital: "Augusta",
@@ -190,7 +190,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/md-bg.jpg",
+    backgroundImage: "/md-bg.jpg",
     name: "Maryland",
     options: {
       stateCapital: "Annapolis",
@@ -200,7 +200,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ma-bg.jpg",
+    backgroundImage: "/ma-bg.jpg",
     name: "Massachusetts",
     options: {
       stateCapital: "Boston",
@@ -210,7 +210,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/mi-bg.jpg",
+    backgroundImage: "/mi-bg.jpg",
     name: "Michigan",
     options: {
       stateCapital: "Lansing",
@@ -220,7 +220,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/mn-bg.jpg",
+    backgroundImage: "/mn-bg.jpg",
     name: "Minnesota",
     options: {
       stateCapital: "St. Paul",
@@ -230,7 +230,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ms-bg.jpg",
+    backgroundImage: "/ms-bg.jpg",
     name: "Mississippi",
     options: {
       stateCapital: "Jackson",
@@ -240,7 +240,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/mo-bg.jpg",
+    backgroundImage: "/mo-bg.jpg",
     name: "Missouri",
     options: {
       stateCapital: "Jefferson City",
@@ -250,7 +250,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/mt-bg.jpg",
+    backgroundImage: "/mt-bg.jpg",
     name: "Montana",
     options: {
       stateCapital: "Helena",
@@ -260,7 +260,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ne-bg.jpg",
+    backgroundImage: "/ne-bg.jpg",
     name: "Nebraska",
     options: {
       stateCapital: "Lincoln",
@@ -270,7 +270,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/nv-bg.jpg",
+    backgroundImage: "/nv-bg.jpg",
     name: "Nevada",
     options: {
       stateCapital: "Carson City",
@@ -280,7 +280,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/nh-bg.jpg",
+    backgroundImage: "/nh-bg.jpg",
     name: "New Hampshire",
     options: {
       stateCapital: "Concord",
@@ -290,7 +290,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/nj-bg.jpg",
+    backgroundImage: "/nj-bg.jpg",
     name: "New Jersey",
     options: {
       stateCapital: "Trenton",
@@ -300,7 +300,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/nm-bg.jpg",
+    backgroundImage: "/nm-bg.jpg",
     name: "New Mexico",
     options: {
       stateCapital: "Santa Fe",
@@ -310,7 +310,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ny-bg.jpg",
+    backgroundImage: "/ny-bg.jpg",
     name: "New York",
     options: {
       stateCapital: "Albany",
@@ -320,7 +320,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/nc-bg.jpg",
+    backgroundImage: "/nc-bg.jpg",
     name: "North Carolina",
     options: {
       stateCapital: "Raleigh",
@@ -330,7 +330,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/nd-bg.jpg",
+    backgroundImage: "/nd-bg.jpg",
     name: "North Dakota",
     options: {
       stateCapital: "Bismarck",
@@ -340,7 +340,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/oh-bg.jpg",
+    backgroundImage: "/oh-bg.jpg",
     name: "Ohio",
     options: {
       stateCapital: "Columbus",
@@ -350,7 +350,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ok-bg.jpg",
+    backgroundImage: "/ok-bg.jpg",
     name: "Oklahoma",
     options: {
       stateCapital: "Oklahoma City",
@@ -360,7 +360,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/or-bg.jpg",
+    backgroundImage: "/or-bg.jpg",
     name: "Oregon",
     options: {
       stateCapital: "Salem",
@@ -370,7 +370,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/pa-bg.jpg",
+    backgroundImage: "/pa-bg.jpg",
     name: "Pennsylvania",
     options: {
       stateCapital: "Harrisburg",
@@ -380,7 +380,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ri-bg.jpg",
+    backgroundImage: "/ri-bg.jpg",
     name: "Rhode Island",
     options: {
       stateCapital: "Providence",
@@ -390,7 +390,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/sc-bg.jpg",
+    backgroundImage: "/sc-bg.jpg",
     name: "South Carolina",
     options: {
       stateCapital: "Columbia",
@@ -400,7 +400,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/sd-bg.jpg",
+    backgroundImage: "/sd-bg.jpg",
     name: "South Dakota",
     options: {
       stateCapital: "Pierre",
@@ -410,7 +410,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/tn-bg.jpg",
+    backgroundImage: "/tn-bg.jpg",
     name: "Tennessee",
     options: {
       stateCapital: "Nashville",
@@ -420,7 +420,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/tx-bg.jpg",
+    backgroundImage: "/tx-bg.jpg",
     name: "Texas",
     options: {
       stateCapital: "Austin",
@@ -430,7 +430,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/ut-bg.jpg",
+    backgroundImage: "/ut-bg.jpg",
     name: "Utah",
     options: {
       stateCapital: "Salt Lake City",
@@ -440,7 +440,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/vt-bg.jpg",
+    backgroundImage: "/vt-bg.jpg",
     name: "Vermont",
     options: {
       stateCapital: "Montpelier",
@@ -450,7 +450,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/va-bg.jpg",
+    backgroundImage: "/va-bg.jpg",
     name: "Virginia",
     options: {
       stateCapital: "Richmond",
@@ -460,7 +460,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/wa-bg.jpg",
+    backgroundImage: "/wa-bg.jpg",
     name: "Washington",
     options: {
       stateCapital: "Olympia",
@@ -470,7 +470,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/wv-bg.jpg",
+    backgroundImage: "/wv-bg.jpg",
     name: "West Virginia",
     options: {
       stateCapital: "Charleston",
@@ -480,7 +480,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/wi-bg.jpg",
+    backgroundImage: "/wi-bg.jpg",
     name: "Wisconsin",
     options: {
       stateCapital: "Madison",
@@ -490,7 +490,7 @@ const statesInfo = [
     },
   },
   {
-    backgroundImage: "./assets/wy-bg.jpg",
+    backgroundImage: "/wy-bg.jpg",
     name: "Wyoming",
     options: {
       stateCapital: "Cheyenne",
